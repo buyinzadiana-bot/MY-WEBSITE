@@ -1,70 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diana BUYINZA</title>
-    <linkrel="stylesheet" href="styles.css">
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-</head>
-<body class="bg-white text-gray-800">
-
-    
-    <!-- LINKS -->
-
-    <a href="index.html">Home</a>
-    <a href="about/index.html">About Me</a>
-    <a href="professional experience.html">Professional Experience</a>
-    <a href="My book.html">My Books</a>
-    <a href="Publication/Writing.html">Publication/Writing</a>
-    <a href="Portfolio.html">Portfolio</a>
-    <a href="Skills">Skills</a>
-    <a href="Blog.html">Blog</a>
-    <a href="Contact.html">Contact</a>
-    <a href="For more info.htnl">For More Info</a>
-
-
-
+  </head>
+  <body class="bg-white text-gray-800">
     <!-- HEADER -->
 
     <header class="fixed top-0 w-full bg-white shadow z-50">
-
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <div class="text-2xl font-bold">Diana BUYINZA</div>
-            <nav class="space-x-6">
-                <a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a>
-                <a href="about/index.html" class="text-gray-800 hover:text-blue-600">About Me</a>
-                <a href="professional experience.html" class="text-gray-800 hover:text-blue-600">Professional Experience</a>
-                <a href="My book.html" class="text-gray-800 hover:text-blue-600">My Books</a>
-                <a href="Publication/Writing.html" class="text-gray-800 hover:text-blue-600">Publication/Writing</a>
-                <a href="Portfolio.html" class="text-gray-800 hover:text-blue-600">Portfolio</a>
-                <a href="Skills" class="text-gray-800 hover:text-blue-600">Skills</a>
-                <a href="Blog.html" class="text-gray-800 hover:text-blue-600">Blog</a>
-                <a href="Contact.html" class="text-gray-800 hover:text-blue-600">Contact</a>
-                <a href="For more info.htnl" class="text-gray-800 hover:text-blue-600">For More Info</a>
-            </nav>
-        </div>
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="text-3xl font-bold">Diana BUYINZA</div>
+        <nav class="space-x-6 text-sm font-medium">
+          <a href="/index.html" class="text-gray-800 hover:text-blue-500"
+            >Home</a
+          >
+          <a href="/about/index.html" class="text-gray-800 hover:text-blue-500"
+            >About Me</a
+          >
+          <a
+            href="/professional experience/"
+            class="text-gray-800 hover:text-blue-500"
+          >
+            Professional Experience</a
+          >
+          <a href="/portfolio/" class="text-gray-800 hover:text-blue-500"
+            >portfolio</a
+          >
+          <a href="/skills/" class="text-gray-800 hover:text-blue-500"
+            >Skills</a
+          >
+          <a
+            href="/contacts/index.html"
+            class="text-gray-800 hover:text-blue-500"
+            >Contacts</a
+          >
+        </nav>
+      </div>
     </header>
 
     <div class="pt-20"><!-- padding for fixed header --></div>
 
-
     <!-- HERO SECTION -->
 
+    <section class="relative w-full h-screen">
+      <!-- Background Image -->
+      <img
+        src="images/IMG_3417.JPG"
+        alt="Diana BUYINZA"
+        class="w-full h-full object-cover"
+      />
 
-    <!-- SHORT INTRO -->
+      <!-- Content over the image -->
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Diana BUYINZA</h1>
+        <p class="text-lg md:text-2xl mb-6">
+          Entreprenuer, Author and Web engineer
+        </p>
+        <a
+          href="#contact"
+          class="bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-full text-lg transition"
+          >Work With Me</a
+        >
+      </div>
+    </section>
 
+    <!-- ABOUT ME -->
+
+    <!-- Content Section -->
+    <section class="bg-white px-6 py-12 flex justify-center">
+      <p class="max-w-2xl text-center text-lg text-gray-700">
+        Diana is an entrepreneur, author and front-end web engineer passionate
+        about transforming data into intelligence. As the founder of an
+        AI-driven data intelligence platform and service company, I help
+        organizations unlock insights that drive smarter decisions. With a
+        background in auditing, accounting, finance, and market intelligence at
+        RDB, I bridge business strategy with technology. My work combines
+        precision in financial analysis with innovation in AI and engineering,
+        creating solutions that are both powerful and accessible.
+      </p>
+    </section>
 
     <!-- HIGHLIGHTS/QUICKLINKS -->
 
-
     <!-- RECENT PROJECTS -->
 
-
     <!-- CALL TO ACTION -->
-
-
-
-</body>
+  </body>
 </html>
