@@ -23,7 +23,7 @@ The website includes the following pages:
 
 TECH USED
 
-HTML5 and CSS3
+HTML5 
 Tailwind CSS for styling
 Google Fonts (Playfair Display for headings, Lora for body text)
 JavaScript for mobile menu toggling
