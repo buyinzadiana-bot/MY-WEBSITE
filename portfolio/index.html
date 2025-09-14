@@ -1,56 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diana BUYINZA</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-</style>
-
-    <linkrel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-</head>
-<body class="bg-white text-gray-800">
-
-
-
-
-
+  </head>
+  <body class="bg-white text-gray-800">
     <!-- HEADER -->
 
     <header class="fixed top-0 w-full bg-white shadow z-50">
-
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <div class="text-3xl font-bold">Diana BUYINZA</div>
-  <nav class="space-x-6 text-sm font-medium">
-  <a href="/index.html" class="text-gray-800 hover:text-blue-500">Home</a>
-  <a href="/about/index.html" class="text-gray-800 hover:text-blue-500">About Me</a>
-  <a href="/professional experience/" class="text-gray-800 hover:text-blue-500">Professional Experience</a>
-  <a href="/portfolio/" class="text-gray-800 hover:text-blue-500">Portfolio</a>
-  <a href="/skills/" class="text-gray-800 hover:text-blue-500">Skills</a>
-  <a href="/contacts/" class="text-gray-800 hover:text-blue-500">Contacts</a>
-</nav>
-        </div>
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="text-3xl font-bold">Diana BUYINZA</div>
+        <nav class="space-x-6 text-sm font-medium">
+          <a href="/index.html" class="text-gray-800 hover:text-blue-500"
+            >Home</a
+          >
+          <a href="/about/index.html" class="text-gray-800 hover:text-blue-500"
+            >About Me</a
+          >
+          <a
+            href="/professional experience/"
+            class="text-gray-800 hover:text-blue-500"
+          >
+            Professional Experience</a
+          >
+          <a
+            href="/portfolio/index.html"
+            class="text-gray-800 hover:text-blue-500"
+            >Portfolio</a
+          >
+          <a
+            href="/contacts/index.html"
+            class="text-gray-800 hover:text-blue-500"
+            >Contacts</a
+          >
+        </nav>
+      </div>
     </header>
 
     <div class="pt-20"><!-- padding for fixed header --></div>
 
+    <!-- Hero Section -->
+    <section class="bg-white py-20 shadow-sm">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">My Portfolio</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          A showcase of my projects, ideas, and work. I specialize in creating
+          clean, modern, and user-friendly designs.
+        </p>
+      </div>
+    </section>
 
+    <!-- Projects Grid -->
+    <section class="container mx-auto px-6 py-16">
+      <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div
+          class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="project1.jpg"
+            alt="Project 1"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Project Title One</h3>
+            <p class="text-gray-600 mb-4">
+              Short description of the project goes here. Explain what you built
+              and why it matters.
+            </p>
+            <a href="#" class="text-blue-500 hover:underline">View Project →</a>
+          </div>
+        </div>
 
-    <!-- INTRODUCTION SECTION -->
+        <!-- Project Card 2 -->
+        <div
+          class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="project2.jpg"
+            alt="Project 2"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Project Title Two</h3>
+            <p class="text-gray-600 mb-4">
+              Another amazing project with a short description highlighting your
+              role.
+            </p>
+            <a href="#" class="text-blue-500 hover:underline">View Project →</a>
+          </div>
+        </div>
 
-    <!-- PROFESSIONAL JOURNEY & CAREER EXPERIENCE -->
+        <!-- Project Card 3 -->
+        <div
+          class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="project3.jpg"
+            alt="Project 3"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Project Title Three</h3>
+            <p class="text-gray-600 mb-4">
+              A project that demonstrates your creativity and technical skills.
+            </p>
+            <a href="#" class="text-blue-500 hover:underline">View Project →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- CORE SKILLS -->
+    <!-- Call to Action -->
+    <section class="bg-blue-500 text-white py-16">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Interested in working together?</h2>
+        <p class="text-lg mb-6">Let’s connect and bring your ideas to life.</p>
+        <a
+          href="/contact.html"
+          class="px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow hover:bg-gray-100 transition"
+        >
+          Contact Me
+        </a>
+      </div>
+    </section>
 
-    <!-- VALUES & PHILOSOPHY -->
-
-    <!-- CALL TO ACTION -->
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 text-center text-gray-600">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
   </body>
 </html>

@@ -32,25 +32,66 @@
   <a href="/index.html" class="text-gray-800 hover:text-blue-500">Home</a>
   <a href="/about/index.html" class="text-gray-800 hover:text-blue-500">About Me</a>
   <a href="/professional experience/index.html" class="text-gray-800 hover:text-blue-500">Professional Experience</a>
- <a href="/portfolio/index.html" class="text-gray-800 hover:text-blue-500">portfolio</a>
- <a href="/skills/index.html" class="text-gray-800 hover:text-blue-500">Skills</a>
+  <a href="/portfolio/" class="text-gray-800 hover:text-blue-500">Portfolio</a>
  <a href="/contacts/index.html" class="text-gray-800 hover:text-blue-500">Contacts</a>
 </nav>
+
         </div>
     </header>
 
     <div class="pt-20"><!-- padding for fixed header --></div>
 
+<!-- Section 1: Intro + Contact Form -->
+  <section class="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <!-- Left: Short Intro -->
+    <div class="flex flex-col justify-center">
+      <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        I’d love to hear from you! Whether you have a question, a project idea,
+        or just want to say hello, feel free to reach out using the form.
+      </p>
+    </div>
 
+    <!-- Right: Contact Form -->
+    <div class="bg-white shadow-lg rounded-lg p-8">
+      <form class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium">Name</label>
+          <input type="text" id="name" name="name"
+                 class="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium">Email</label>
+          <input type="email" id="email" name="email"
+                 class="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium">Message</label>
+          <textarea id="message" name="message" rows="4"
+                 class="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <button type="submit"
+                class="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
 
-    <!-- INTRODUCTION SECTION -->
+  <!-- Section 2: Direct Contact Info + Social Links -->
+  <section class="bg-white py-12">
+    <div class="container mx-auto px-6 text-center space-y-6">
+      <h3 class="text-2xl font-bold">Direct Contact</h3>
+      <p class="text-gray-600">Email: <a href="mailto:your@email.com" class="text-blue-500 hover:underline">your@email.com</a></p>
+      <p class="text-gray-600">Phone: <a href="tel:+1234567890" class="text-blue-500 hover:underline">+123 456 7890</a></p>
 
-    <!-- PROFESSIONAL JOURNEY & CAREER EXPERIENCE -->
-
-    <!-- CORE SKILLS -->
-
-    <!-- VALUES & PHILOSOPHY -->
-
-    <!-- CALL TO ACTION -->
+      <!-- Social Links -->
+      <div class="flex justify-center space-x-6">
+        <a href="#" class="text-gray-600 hover:text-blue-500">Instagram</a>
+        <a href="#" class="text-gray-600 hover:text-blue-500">LinkedIn</a>
+        <a href="#" class="text-gray-600 hover:text-blue-500">Twitter</a>
+      </div>
+    </div>
+  </section>
   </body>
 </html>
