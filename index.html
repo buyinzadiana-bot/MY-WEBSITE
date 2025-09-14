@@ -5,46 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diana BUYINZA</title>
 
+    <!-- Google Fonts: Playfair Display + Lora -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Lora", serif;
+      }
+      h1,
+      h2 {
+        font-family: "Playfair Display", serif;
+      }
+    </style>
   </head>
   <body class="bg-white text-gray-800">
     <!-- HEADER -->
-
     <header class="fixed top-0 w-full bg-white shadow z-50">
       <div class="container mx-auto flex justify-between items-center p-4">
         <div class="text-3xl font-bold">Diana BUYINZA</div>
-        <nav class="space-x-6 text-sm font-medium">
-          <a href="/index.html" class="text-gray-800 hover:text-blue-500"
+
+        <!-- Nav links (desktop) -->
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="/index.html" class="text-gray-800 hover:text-pink-500"
             >Home</a
           >
-          <a href="/about/index.html" class="text-gray-800 hover:text-blue-500"
+          <a href="/about/index.html" class="text-gray-800 hover:text-pink-500"
             >About Me</a
           >
           <a
             href="/professional experience/"
-            class="text-gray-800 hover:text-blue-500"
-          >
-            Professional Experience</a
+            class="text-gray-800 hover:text-pink-500"
+            >Professional Experience</a
           >
           <a
             href="/portfolio/index.html"
-            class="text-gray-800 hover:text-blue-500"
+            class="text-gray-800 hover:text-pink-500"
             >Portfolio</a
           >
           <a
             href="/contacts/index.html"
-            class="text-gray-800 hover:text-blue-500"
+            class="text-gray-800 hover:text-pink-500"
             >Contacts</a
           >
         </nav>
+
+        <!-- Hamburger button (mobile) -->
+        <button id="menu-btn" class="block md:hidden text-2xl">☰</button>
       </div>
+
+      <!-- Mobile dropdown menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden flex-col md:hidden space-y-4 p-4 bg-white shadow"
+      >
+        <a href="/index.html" class="text-gray-800 hover:text-pink-500">Home</a>
+        <a href="/about/index.html" class="text-gray-800 hover:text-pink-500"
+          >About Me</a
+        >
+        <a
+          href="/professional experience/"
+          class="text-gray-800 hover:text-pink-500"
+          >Professional Experience</a
+        >
+        <a
+          href="/portfolio/index.html"
+          class="text-gray-800 hover:text-pink-500"
+          >Portfolio</a
+        >
+        <a href="/contacts/index.html" class="text-gray-800 hover:text-pink-500"
+          >Contacts</a
+        >
+      </nav>
     </header>
 
-    <div class="pt-20"><!-- padding for fixed header --></div>
+    <!-- Padding for fixed header -->
+    <div class="pt-24"></div>
 
     <!-- HERO SECTION -->
-
     <section class="relative w-full h-screen">
       <!-- Background Image -->
       <img
@@ -57,38 +100,45 @@
       <div
         class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6"
       >
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">Diana BUYINZA</h1>
-        <p class="text-lg md:text-2xl mb-6">
-          Entreprenuer, Author and Web engineer
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          Diana BUYINZA
+        </h1>
+        <p class="text-lg sm:text-xl md:text-2xl mb-6">
+          Entrepreneur, Author & Web Engineer
         </p>
         <a
           href="#contact"
           class="bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-full text-lg transition"
-          >Work With Me</a
         >
+          Work With Me
+        </a>
       </div>
     </section>
 
     <!-- ABOUT ME -->
-
-    <!-- Content Section -->
-    <section class="bg-white px-6 py-12 flex justify-center">
-      <p class="max-w-2xl text-center text-lg text-gray-700">
-        Diana is an entrepreneur, author and front-end web engineer passionate
+    <section class="bg-white px-6 md:px-12 py-12 md:py-24 flex justify-center">
+      <p
+        class="max-w-3xl text-center md:text-left text-lg md:text-xl text-gray-700 leading-relaxed"
+      >
+        Diana is an entrepreneur, author, and front-end web engineer passionate
         about transforming data into intelligence. As the founder of an
-        AI-driven data intelligence platform and service company, I help
+        AI-driven data intelligence platform and service company, she helps
         organizations unlock insights that drive smarter decisions. With a
         background in auditing, accounting, finance, and market intelligence at
-        RDB, I bridge business strategy with technology. My work combines
+        RDB, she bridges business strategy with technology. Her work combines
         precision in financial analysis with innovation in AI and engineering,
         creating solutions that are both powerful and accessible.
       </p>
     </section>
 
-    <!-- HIGHLIGHTS/QUICKLINKS -->
+    <!-- Mobile menu toggle script -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-    <!-- RECENT PROJECTS -->
-
-    <!-- CALL TO ACTION -->
+      btn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>

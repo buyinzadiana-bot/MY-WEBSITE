@@ -1,123 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diana BUYINZA</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diana BUYINZA - Professional Experience</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-</style>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <linkrel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-</head>
-<body class="bg-white text-gray-800">
-
-
-
-
-
+    <style>
+      body {
+        font-family: "Lora", serif;
+      }
+      h2 {
+        font-family: "Playfair Display", serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
     <!-- HEADER -->
-
     <header class="fixed top-0 w-full bg-white shadow z-50">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="text-3xl font-bold">Diana BUYINZA</div>
 
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <div class="text-3xl font-bold">Diana BUYINZA</div>
-  <nav class="space-x-6 text-sm font-medium">
-  <a href="/index.html" class="text-gray-800 hover:text-blue-500">Home</a>
-  <a href="/about/index.html" class="text-gray-800 hover:text-blue-500">About Me</a>
-  <a href="/professional experience/" class="text-gray-800 hover:text-blue-500">Professional Experience</a>
-  <a href="/portfolio/" class="text-gray-800 hover:text-blue-500">Portfolio</a>
-  <a href="/contacts/index.html" class="text-gray-800 hover:text-blue-500">Contacts</a>
-</nav>
-        </div>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="/index.html" class="text-gray-800 hover:text-pink-500"
+            >Home</a
+          >
+          <a href="/about/index.html" class="text-gray-800 hover:text-pink-500"
+            >About Me</a
+          >
+          <a
+            href="/professional experience/"
+            class="text-gray-800 hover:text-pink-500"
+            >Professional Experience</a
+          >
+          <a href="/portfolio/" class="text-gray-800 hover:text-pink-500"
+            >Portfolio</a
+          >
+          <a
+            href="/contacts/index.html"
+            class="text-gray-800 hover:text-pink-500"
+            >Contacts</a
+          >
+        </nav>
+
+        <!-- Hamburger button (mobile) -->
+        <button id="menu-btn" class="block md:hidden text-2xl">☰</button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <nav
+        id="mobile-menu"
+        class="hidden flex-col md:hidden space-y-4 p-4 bg-white shadow"
+      >
+        <a href="/index.html" class="text-gray-800 hover:text-pink-500">Home</a>
+        <a href="/about/index.html" class="text-gray-800 hover:text-pink-500"
+          >About Me</a
+        >
+        <a
+          href="/professional experience/"
+          class="text-gray-800 hover:text-pink-500"
+          >Professional Experience</a
+        >
+        <a href="/portfolio/" class="text-gray-800 hover:text-pink-500"
+          >Portfolio</a
+        >
+        <a href="/contacts/index.html" class="text-gray-800 hover:text-pink-500"
+          >Contacts</a
+        >
+      </nav>
     </header>
 
-    <div class="pt-24"><!-- padding for fixed header --></div>
+    <!-- Padding for fixed header -->
+    <div class="pt-24"></div>
 
+    <!-- PROFESSIONAL EXPERIENCE SECTION -->
+    <section
+      class="px-6 md:px-12 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8"
+    >
+      <!-- Left: Image -->
+      <div class="h-64 md:h-auto">
+        <img
+          src="/images/IMG_3409.JPG"
+          alt="Professional Experience"
+          class="w-full h-full object-cover rounded-lg shadow-lg"
+        />
+      </div>
 
-    <!-- INTRODUCTION SECTION -->
+      <!-- Right: Text -->
+      <div
+        class="flex items-start md:items-center justify-center px-4 md:px-10 py-8 md:py-0"
+      >
+        <div class="max-w-lg text-center md:text-left">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6">
+            Professional Experience
+          </h2>
 
-    <!-- About Section -->
-  <section class="h-screen grid grid-cols-1 md:grid-cols-2">
-    
-    <!-- Left: Image -->
-    <div class="h-full">
-        <img src="/images/IMG_3409.JPG" alt="About Me"
-           class="w-full h-full object-cover">
-    </div>
+          <div
+            class="space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg md:text-xl"
+          >
+            <p>
+              "Over the years, I’ve built a diverse career across Finance, data
+              and market intelligence, writing and technology. From coding
+              responsive web applications to analyzing markets and ensuring
+              financial transparency, my work has always focused on solving
+              problems with creativity, integrity, and precision."
+            </p>
 
-    <!-- Right: Text -->
-    <div class="flex items-start justify-center px-10 py-16">
-      <div class="max-w-lg">
-        <h2 class="text-4xl font-extrabold mb-6">Professional Experience</h2>
+            <p>
+              🔹
+              <strong>RDB – Data and Market Intelligence research team</strong>:
+              Conducted market research and analysis to support strategic
+              decision-making. Delivered reports that informed business and
+              investment policy.
+            </p>
 
-        <div class="space-y-6 leading-relaxed text-lg text-gray-600">
-          <p>
-            "Over the years, I’ve built a diverse career across Finance, data and market intelligence, 
-            writing and technology. From coding responsive web applications to 
-            analyzing markets and ensuring financial transparency, my work has 
-            always focused on solving problems with creativity, integrity, and precision."
-          </p>
+            <p>
+              🔹 <strong>RUMA CPA – Auditor</strong>: Performed audits for
+              corporate and nonprofit clients. Ensured compliance with financial
+              regulations and standards. Identified risks and recommended
+              internal control improvements.
+            </p>
 
-          <p>
-            🔹RDB – Data and Market Intelligence research team,
+            <p>
+              🔹 <strong>Transparency International – Finance intern</strong>:
+              Managed budgets and financial reporting for anti-corruption
+              initiatives. Promoted accountability and transparency in financial
+              practices.
+            </p>
 
-          Conducted market research and analysis to support strategic decision-making.
-          Delivered reports that informed business and investment policy.
-          </p>
+            <p>
+              🔹 <strong>Women Media for Change – Accountant</strong>: Handled
+              day-to-day accounting and reporting. Supported NGO projects with
+              efficient financial management.
+            </p>
 
-          <p>
-            🔹RUMA CPA – Auditor,
+            <p>
+              🔹 <strong>Author / Writer</strong>: Authored [Book Title] on
+              [theme]. Published articles on [topics]. Focus on technology,
+              finance, and empowerment.
+            </p>
+          </div>
 
-           Performed audits for corporate and nonprofit clients.
-           Ensured compliance with financial regulations and standards.
-           Identified risks and recommended internal control improvements.
-          </p>
-
-          <p>
-            🔹Transparency International – Finance intern, 
-            Managed budgets and financial reporting for anti-corruption initiatives.
-            Promoted accountability and transparency in financial practices
-          </p>
-
-          <p>
-            🔹Women Media for Change – Accountant,
-            Handled day-to-day accounting and reporting.
-            Supported NGO projects with efficient financial management.
-          </p>
-
-          <p>
-            🔹 Author / Writer,
-            Briefly describe your work as an author (books, articles, blogs).
-            Highlight key themes (technology, finance, empowerment, transparency).
-            Mention published works or ongoing projects.
-            Example bullet points:Authored [Book Title] on [theme/subject].
-            Published articles on [topics].
-            Write about the intersection of technology, finance, and society.
-          </p>
-        </div>
-
-        <!-- Call to Action Buttons -->
-        <div class="mt-10 flex space-x-4">
-          <a href="/portfolio.html" 
-             class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700 transition">
-            View Portfolio
-          </a>
-          <a href="/contacts/index.html" 
-             class="px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition">
-            Contact Me
-          </a>
+          <!-- Call to Action Buttons -->
+          <div
+            class="mt-10 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 justify-center md:justify-start"
+          >
+            <a
+              href="/portfolio.html"
+              class="px-6 py-3 bg-pink-500 text-white font-medium rounded-lg shadow hover:bg-pink-600 transition"
+              >View Portfolio</a
+            >
+            <a
+              href="/contacts/index.html"
+              class="px-6 py-3 border border-pink-500 text-pink-500 font-medium rounded-lg hover:bg-pink-50 transition"
+              >Contact Me</a
+            >
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-  </section>
+    <!-- Mobile menu toggle script -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
+      btn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>

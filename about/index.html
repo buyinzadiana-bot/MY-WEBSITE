@@ -1,70 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diana BUYINZA</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-</style>
+    <!-- Google Fonts: Playfair Display + Lora -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <linkrel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-</head>
-<body class="bg-white text-gray-800">
+    <style>
+      body {
+        font-family: "Lora", serif; /* default body font */
+      }
+      h2 {
+        font-family: "Playfair Display", serif; /* heading font */
+      }
+    </style>
+  </head>
 
-
-
-
-
+  <body class="bg-white text-gray-800">
     <!-- HEADER -->
-
     <header class="fixed top-0 w-full bg-white shadow z-50">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="text-3xl font-bold">Diana BUYINZA</div>
 
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <div class="text-3xl font-bold">Diana BUYINZA</div>
-  <nav class="space-x-6 text-sm font-medium">
-  <a href="/index.html" class="text-gray-800 hover:text-blue-500">Home</a>
-  <a href="/about/index.html" class="text-gray-800 hover:text-blue-500">About Me</a>
-  <a href="/professional experience/index.html" class="text-gray-800 hover:text-blue-500">Professional Experience</a>
-  <a href="/portfolio/" class="text-gray-800 hover:text-blue-500">Portfolio</a>
-  <a href="/contacts/index.html" class="text-gray-800 hover:text-blue-500">Contacts</a>
-</nav>
-        </div>
+        <!-- Nav links -->
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="/index.html" class="text-gray-800 hover:text-blue-500"
+            >Home</a
+          >
+          <a href="/about/index.html" class="text-gray-800 hover:text-blue-500"
+            >About Me</a
+          >
+          <a
+            href="/professional experience/index.html"
+            class="text-gray-800 hover:text-blue-500"
+            >Professional Experience</a
+          >
+          <a href="/portfolio/" class="text-gray-800 hover:text-blue-500"
+            >Portfolio</a
+          >
+          <a
+            href="/contacts/index.html"
+            class="text-gray-800 hover:text-blue-500"
+            >Contacts</a
+          >
+        </nav>
+
+        <!-- Hamburger button (mobile) -->
+        <button id="menu-btn" class="block md:hidden text-2xl">☰</button>
+      </div>
+
+      <!-- Mobile dropdown menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden flex-col md:hidden space-y-4 p-4 bg-white shadow"
+      >
+        <a href="/index.html" class="text-gray-800 hover:text-blue-500">Home</a>
+        <a href="/about/index.html" class="text-gray-800 hover:text-blue-500"
+          >About Me</a
+        >
+        <a
+          href="/professional experience/index.html"
+          class="text-gray-800 hover:text-blue-500"
+          >Professional Experience</a
+        >
+        <a href="/portfolio/" class="text-gray-800 hover:text-blue-500"
+          >Portfolio</a
+        >
+        <a href="/contacts/index.html" class="text-gray-800 hover:text-blue-500"
+          >Contacts</a
+        >
+      </nav>
     </header>
 
-    <div class="pt-24"><!-- padding for fixed header --></div>
+    <!-- Padding for fixed header -->
+    <div class="pt-24"></div>
 
-<!-- Hero / Title Section -->
+    <!-- About Section -->
+    <section
+      class="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-12 py-12 md:py-24"
+    >
+      <!-- Left image -->
+      <div class="h-64 md:h-auto">
+        <img
+          src="/images/IMG_3408.JPG"
+          alt="About Me"
+          class="w-full h-full object-cover rounded-lg shadow-lg"
+        />
+      </div>
 
-<section class="h-screen grid grid-cols-1 md:grid-cols-2 gap-12">
-  <!-- Left image -->
-  <div class="h-full">
-    <img src="/images/IMG_3408.JPG" alt="About Me"
-         class="w-full h-full object-cover">
-  </div>
+      <!-- Right text -->
+      <div class="flex items-center justify-center">
+        <div class="max-w-lg text-center md:text-left">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+            About Me
+          </h2>
+          <p
+            class="text-base sm:text-lg md:text-xl mb-6 leading-relaxed text-gray-800"
+          >
+            [Your Name] is an author, entrepreneur, and front-end web engineer
+            with a unique blend of technical expertise and financial acumen. As
+            the founder of an AI-driven data intelligence platform and service
+            company, [Your Name] is passionate about transforming raw data into
+            actionable insights that empower organizations to make smarter,
+            faster decisions. With a strong foundation in auditing, accounting,
+            finance, and market intelligence at RDB.
+          </p>
+          <p
+            class="text-base sm:text-lg md:text-xl leading-relaxed text-gray-700"
+          >
+            [Your Name] brings a rare cross-disciplinary perspective to both
+            technology and business strategy. Their work bridges the gap between
+            financial precision and cutting-edge AI innovation, positioning them
+            at the forefront of the evolving data intelligence landscape. As an
+            engineer and creator, [Your Name] also specializes in building
+            seamless, intuitive front-end experiences, ensuring that complex
+            data solutions are not only powerful but also accessible. Through
+            their entrepreneurial journey and authorship, they continue to
+            explore how technology can reshape industries and unlock new
+            opportunities for growth and efficiency.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Right text -->
-  <div class="flex items-center justify-center p-8">
-    <div class="max-w-md">
-      <h2 class="text-4xl font-bold mb-4">About Me</h2>
-      <p class="mb-10 leading-relaxed">
-        [Your Name] is an author, entrepreneur, and front-end web engineer with a unique blend of technical expertise and financial acumen. As the founder of an AI-driven data intelligence platform and service company, [Your Name] is passionate about transforming raw data into actionable insights that empower organizations to make smarter, faster decisions.
-        With a strong foundation in auditing, accounting, finance, and market intelligence at RDB.
-      </p>
-      <p class="mb-6 leading-relaxed">[Your Name] brings a rare cross-disciplinary perspective to both technology and business strategy. Their work bridges the gap between financial precision and cutting-edge AI innovation, positioning them at the forefront of the evolving data intelligence landscape.
-        As an engineer and creator, [Your Name] also specializes in building seamless, intuitive front-end experiences, ensuring that complex data solutions are not only powerful but also accessible. Through their entrepreneurial journey and authorship, they continue to explore how technology can reshape industries and unlock new opportunities for growth and efficiency.</p>
-    </div>
-  </div>
-</section>
+    <!-- Mobile menu toggle script -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-  
-
-
+      btn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>

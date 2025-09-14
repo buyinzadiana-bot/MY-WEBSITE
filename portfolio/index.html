@@ -3,51 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diana BUYINZA</title>
+    <title>Diana BUYINZA - Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Lora", serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", serif;
+      }
+    </style>
   </head>
   <body class="bg-white text-gray-800">
     <!-- HEADER -->
-
     <header class="fixed top-0 w-full bg-white shadow z-50">
       <div class="container mx-auto flex justify-between items-center p-4">
         <div class="text-3xl font-bold">Diana BUYINZA</div>
-        <nav class="space-x-6 text-sm font-medium">
-          <a href="/index.html" class="text-gray-800 hover:text-blue-500"
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="/index.html" class="text-gray-800 hover:text-pink-500"
             >Home</a
           >
-          <a href="/about/index.html" class="text-gray-800 hover:text-blue-500"
+          <a href="/about/index.html" class="text-gray-800 hover:text-pink-500"
             >About Me</a
           >
           <a
             href="/professional experience/"
-            class="text-gray-800 hover:text-blue-500"
-          >
-            Professional Experience</a
+            class="text-gray-800 hover:text-pink-500"
+            >Professional Experience</a
           >
           <a
             href="/portfolio/index.html"
-            class="text-gray-800 hover:text-blue-500"
+            class="text-gray-800 hover:text-pink-500"
             >Portfolio</a
           >
           <a
             href="/contacts/index.html"
-            class="text-gray-800 hover:text-blue-500"
+            class="text-gray-800 hover:text-pink-500"
             >Contacts</a
           >
         </nav>
+
+        <!-- Hamburger (Mobile) -->
+        <button id="menu-btn" class="block md:hidden text-2xl">☰</button>
       </div>
+
+      <!-- Mobile Nav -->
+      <nav
+        id="mobile-menu"
+        class="hidden flex-col md:hidden space-y-4 p-4 bg-white shadow"
+      >
+        <a href="/index.html" class="text-gray-800 hover:text-pink-500">Home</a>
+        <a href="/about/index.html" class="text-gray-800 hover:text-pink-500"
+          >About Me</a
+        >
+        <a
+          href="/professional experience/"
+          class="text-gray-800 hover:text-pink-500"
+          >Professional Experience</a
+        >
+        <a
+          href="/portfolio/index.html"
+          class="text-gray-800 hover:text-pink-500"
+          >Portfolio</a
+        >
+        <a href="/contacts/index.html" class="text-gray-800 hover:text-pink-500"
+          >Contacts</a
+        >
+      </nav>
     </header>
 
-    <div class="pt-20"><!-- padding for fixed header --></div>
+    <!-- Padding for fixed header -->
+    <div class="pt-24"></div>
 
     <!-- Hero Section -->
     <section class="bg-white py-20 shadow-sm">
       <div class="container mx-auto px-6 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">My Portfolio</h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
           A showcase of my projects, ideas, and work. I specialize in creating
           clean, modern, and user-friendly designs.
         </p>
@@ -56,16 +101,18 @@
 
     <!-- Projects Grid -->
     <section class="container mx-auto px-6 py-16">
-      <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Featured Projects
+      </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Project Card 1 -->
         <div
           class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition"
         >
           <img
-            src="project1.jpg"
+            src="project/project1.jpeg"
             alt="Project 1"
-            class="w-full h-48 object-cover"
+            class="w-full h-64 md:h-48 object-cover"
           />
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Project Title One</h3>
@@ -73,7 +120,7 @@
               Short description of the project goes here. Explain what you built
               and why it matters.
             </p>
-            <a href="#" class="text-blue-500 hover:underline">View Project →</a>
+            <a href="#" class="text-pink-500 hover:underline">View Project →</a>
           </div>
         </div>
 
@@ -82,9 +129,9 @@
           class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition"
         >
           <img
-            src="project2.jpg"
+            src="images/IMG_3408.JPG"
             alt="Project 2"
-            class="w-full h-48 object-cover"
+            class="w-full h-64 md:h-48 object-cover"
           />
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Project Title Two</h3>
@@ -92,7 +139,7 @@
               Another amazing project with a short description highlighting your
               role.
             </p>
-            <a href="#" class="text-blue-500 hover:underline">View Project →</a>
+            <a href="#" class="text-pink-500 hover:underline">View Project →</a>
           </div>
         </div>
 
@@ -101,29 +148,33 @@
           class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition"
         >
           <img
-            src="project3.jpg"
+            src="project/project3.jpg"
             alt="Project 3"
-            class="w-full h-48 object-cover"
+            class="w-full h-64 md:h-48 object-cover"
           />
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Project Title Three</h3>
             <p class="text-gray-600 mb-4">
               A project that demonstrates your creativity and technical skills.
             </p>
-            <a href="#" class="text-blue-500 hover:underline">View Project →</a>
+            <a href="#" class="text-pink-500 hover:underline">View Project →</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="bg-blue-500 text-white py-16">
+    <section class="bg-pink-500 text-white py-16">
       <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-4">Interested in working together?</h2>
-        <p class="text-lg mb-6">Let’s connect and bring your ideas to life.</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Interested in working together?
+        </h2>
+        <p class="text-lg md:text-xl mb-6">
+          Let’s connect and bring your ideas to life.
+        </p>
         <a
-          href="/contact.html"
-          class="px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow hover:bg-gray-100 transition"
+          href="/contacts/index.html"
+          class="px-6 py-3 bg-white text-pink-500 font-semibold rounded-lg shadow hover:bg-gray-100 transition"
         >
           Contact Me
         </a>
@@ -132,7 +183,17 @@
 
     <!-- Footer -->
     <footer class="bg-gray-100 py-8 text-center text-gray-600">
-      <p>&copy; 2025 Your Name. All rights reserved.</p>
+      <p>&copy; 2025 Diana BUYINZA. All rights reserved.</p>
     </footer>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
