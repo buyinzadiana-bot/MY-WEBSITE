@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TourInsight.AI Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Top Bar -->
+    <header
+      class="sticky top-0 z-50 flex itema-center justify-between bg-gray-900 text-gray-100 px-6 py-4 shadow"
+    >
+      <!-- Left Side: Logo + Search -->
+      <div class="flex items-center space-x-4 mb-4">
+        <div class="text-2xl font-bold">TourInsight.AI</div>
+        <!-- Search -->
+        <div class="flex items-center bg-gray-800 rounded-md px-3 py-2 w-64">
+          <span class="material-icons mr-2 text-gray-400">search</span>
+          <input
+            type="text"
+            placeholder="Search..."
+            class="bg-gray-800 text-gray-100 focus:outline-none w-full"
+          />
+        </div>
+      </div>
+
+      <!-- Right Side: Profile -->
+      <div class="relative">
+        <button
+          id="profileButton"
+          class="flex items-center space-x-2 focus:outline-none"
+        >
+          <span class="material-icons">account_circle</span>
+          <span>John Doe</span>
+          <span class="material-icons text-gray-400">expand_more</span>
+        </button>
+
+        <!-- Dropdown -->
+        <div
+          id="profileMenu"
+          class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 text-gray-700"
+        >
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Settings</a>
+          <div class="border-t my-1"></div>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-gray-900 text-gray-100 p-6 flex flex-col">
+        <nav class="flex-1 space-y-2">
+          <a
+            href="#"
+            class="flex items-center py-2 px-4 rounded bg-gray-800 hover:bg-gray-700"
+          >
+            <span class="material-icons mr-3">home</span> Dashboard
+          </a>
+          <a
+            href="#"
+            class="flex items-center py-2 px-4 rounded hover:bg-gray-800"
+          >
+            <span class="material-icons mr-3">bar_chart</span> Analytics
+          </a>
+          <a
+            href="#"
+            class="flex items-center py-2 px-4 rounded hover:bg-gray-800"
+          >
+            <span class="material-icons mr-3">description</span> Reports
+          </a>
+          <a
+            href="#"
+            class="flex items-center py-2 px-4 rounded hover:bg-gray-800"
+          >
+            <span class="material-icons mr-3">notifications</span> Alerts
+          </a>
+          <a
+            href="#"
+            class="flex items-center py-2 px-4 rounded hover:bg-gray-800"
+          >
+            <span class="material-icons mr-3">dataset</span> Datasets
+          </a>
+          <a
+            href="#"
+            class="flex items-center py-2 px-4 rounded hover:bg-gray-800"
+          >
+            <span class="material-icons mr-3">settings</span> Settings
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6">
+        <!-- Top Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="text-xl font-bold">1.2M</p>
+            <p class="text-gray-500 text-sm">Visitors</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="text-xl font-bold">67%</p>
+            <p class="text-gray-500 text-sm">Hotel Occupancy</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="text-xl font-bold">$1.4B</p>
+            <p class="text-gray-500 text-sm">Tourism Revenue</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="text-xl font-bold">85%</p>
+            <p class="text-gray-500 text-sm">Positive Sentiment</p>
+          </div>
+        </div
+
+        <!-- Tourists Over Time Chart -->
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <h2 class="text-lg font-semibold mb-4">Tourists Over Time</h2>
+          <canvas id="lineChart" class="w-full h-64"></canvas>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Visitors by Market -->
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-lg font-semibold mb-4">Visitors by Market</h2>
+            <canvas id="pieChart" class="w-full h-64"></canvas>
+          </div>
+
+          <!-- Monthly Revenue -->
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-lg font-semibold mb-4">Monthly Revenue</h2>
+            <canvas id="barChart" class="w-full h-64"></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Line Chart: Tourists Over Time
+      const ctxLine = document.getElementById("lineChart").getContext("2d");
+      new Chart(ctxLine, {
+        type: "line",
+        data: {
+          labels: [
+            "Jan 21",
+            "May 21",
+            "Sep 21",
+            "Jan 22",
+            "May 22",
+            "Sep 22",
+            "Jan 23",
+            "Mar 23",
+          ],
+          datasets: [
+            {
+              label: "Tourists",
+              data: [
+                50000, 80000, 120000, 110000, 150000, 130000, 160000, 100000,
+              ],
+              borderColor: "rgb(59, 130, 246)",
+              backgroundColor: "rgba(59, 130, 246, 0.2)",
+              tension: 0.3,
+              fill: true,
+            },
+          ],
+        },
+        options: { responsive: true, plugins: { legend: { display: false } } },
+      });
+
+      // Pie Chart: Visitors by Market
+      const ctxPie = document.getElementById("pieChart").getContext("2d");
+      new Chart(ctxPie, {
+        type: "pie",
+        data: {
+          labels: ["USA", "UK", "Germany", "Other"],
+          datasets: [
+            {
+              data: [33, 28, 19, 20],
+              backgroundColor: ["#3b82f6", "#10b981", "#f59e0b", "#6b7280"],
+            },
+          ],
+        },
+        options: { responsive: true },
+      });
+
+      // Bar Chart: Monthly Revenue
+      const ctxBar = document.getElementById("barChart").getContext("2d");
+      new Chart(ctxBar, {
+        type: "bar",
+        data: {
+          labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          datasets: [
+            {
+              label: "Revenue ($M)",
+              data: [120, 150, 180, 210, 220, 200],
+              backgroundColor: "#3b82f6",
+            },
+          ],
+        },
+        options: { responsive: true, plugins: { legend: { display: false } } },
+      });
+
+      // Profile Dropdown Toggle
+      const profileButton = document.getElementById("profileButton");
+      const profileMenu = document.getElementById("profileMenu");
+
+      profileButton.addEventListener("click", () => {
+        profileMenu.classList.toggle("hidden");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          !profileButton.contains(e.target) &&
+          !profileMenu.contains(e.target)
+        ) {
+          profileMenu.classList.add("hidden");
+        }
+      });
+    </script>
+    
+  </body>
+</html>

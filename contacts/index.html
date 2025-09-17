@@ -30,10 +30,17 @@
     <!-- HEADER -->
     <header class="fixed top-0 w-full bg-white shadow z-50">
       <div class="container mx-auto flex justify-between items-center p-4">
-        <div class="text-3xl font-bold">Diana BUYINZA</div>
+        <!-- Logo -->
+        <div class="text-2xl md:text-3xl font-bold">Diana BUYINZA</div>
 
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+        <!-- Hamburger button (mobile only) -->
+        <button id="menu-btn" class="block md:hidden text-2xl">☰</button>
+
+        <!-- Nav links -->
+        <nav
+          id="nav-links"
+          class="hidden absolute top-full left-0 w-full flex-col bg-white shadow-md space-y-4 p-4 md:static md:flex md:flex-row md:space-y-0 md:space-x-6 md:bg-transparent md:shadow-none md:w-auto"
+        >
           <a href="/index.html" class="text-gray-800 hover:text-pink-500"
             >Home</a
           >
@@ -54,33 +61,18 @@
             >Contacts</a
           >
         </nav>
-
-        <!-- Hamburger (Mobile) -->
-        <button id="menu-btn" class="block md:hidden text-2xl">☰</button>
       </div>
-
-      <!-- Mobile Nav -->
-      <nav
-        id="mobile-menu"
-        class="hidden flex-col md:hidden space-y-4 p-4 bg-white shadow"
-      >
-        <a href="/index.html" class="text-gray-800 hover:text-pink-500">Home</a>
-        <a href="/about/index.html" class="text-gray-800 hover:text-pink-500"
-          >About Me</a
-        >
-        <a
-          href="/professional experience/index.html"
-          class="text-gray-800 hover:text-pink-500"
-          >Professional Experience</a
-        >
-        <a href="/portfolio/" class="text-gray-800 hover:text-pink-500"
-          >Portfolio</a
-        >
-        <a href="/contacts/index.html" class="text-gray-800 hover:text-pink-500"
-          >Contacts</a
-        >
-      </nav>
     </header>
+
+    <!-- Script to toggle nav on mobile -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const nav = document.getElementById("nav-links");
+
+      btn.addEventListener("click", () => {
+        nav.classList.toggle("hidden");
+      });
+    </script>
 
     <!-- Padding for fixed header -->
     <div class="pt-24"></div>
@@ -178,15 +170,5 @@
     <footer class="bg-gray-100 py-8 text-center text-gray-600">
       <p>&copy; 2025 Diana BUYINZA. All rights reserved.</p>
     </footer>
-
-    <!-- Mobile menu toggle script -->
-    <script>
-      const btn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      btn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
   </body>
 </html>
